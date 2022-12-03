@@ -40,7 +40,7 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: './img/ostrich/ostrich3.png',
+    imageSrc: './img/ostrich/ostrich_idle.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -49,7 +49,7 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './img/ostrich/ostrich3.png',
+            imageSrc: './img/ostrich/ostrich_idle.png',
             framesMax: 4
         },
         run: {
