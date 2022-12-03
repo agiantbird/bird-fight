@@ -14,7 +14,7 @@ const background = new Sprite({
         x: 0,
         y: 0
     },
-    imageSrc: './img/background.png'
+    imageSrc: './img/new_background.png'
 })
 
 const shop = new Sprite({
@@ -22,7 +22,7 @@ const shop = new Sprite({
         x: 600,
         y: 128,
     },
-    imageSrc: './img/shop.png',
+    imageSrc: './img/volcano.png',
     scale: 2.75,
     framesMax: 6
 })
@@ -40,8 +40,8 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: './img/samuraiMack/Idle.png',
-    framesMax: 8,
+    imageSrc: './img/samuraiMack/ostrich3.png',
+    framesMax: 4,
     scale: 2.5,
     offset: {
         x: 215,
@@ -49,31 +49,31 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './img/samuraiMack/Idle.png',
-            framesMax: 8
+            imageSrc: './img/samuraiMack/ostrich3.png',
+            framesMax: 4
         },
         run: {
-            imageSrc: './img/samuraiMack/Run.png',
+            imageSrc: './img/samuraiMack/ostrich_run.png',
             framesMax: 8
         },
         jump: {
-            imageSrc: './img/samuraiMack/Jump.png',
+            imageSrc: './img/samuraiMack/ostrich_jump.png',
             framesMax: 2
         },
         fall: {
-            imageSrc: './img/samuraiMack/Fall.png',
+            imageSrc: './img/samuraiMack/ostrich_falling.png',
             framesMax: 2
         },
         attack1: {
-            imageSrc: './img/samuraiMack/Attack1.png',
-            framesMax: 6
+            imageSrc: './img/samuraiMack/ostrich_attack.png',
+            framesMax: 4
         },
         takeHit: {
-            imageSrc: './img/samuraiMack/Take_hit_white_silhouette.png',
+            imageSrc: './img/samuraiMack/ostrich_take_hit.png',
             framesMax: 4
         },
         death: {
-            imageSrc: './img/samuraiMack/Death.png',
+            imageSrc: './img/samuraiMack/ostrich_death.png',
             framesMax: 6
         }
     },
@@ -101,7 +101,7 @@ const enemy = new Fighter({
         x: -50,
         y: 0
     },
-    imageSrc: './img/kenji/Idle.png',
+    imageSrc: './img/kenji/bird_idle.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -110,31 +110,31 @@ const enemy = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './img/kenji/Idle.png',
+            imageSrc: './img/kenji/bird_idle.png',
             framesMax: 4
         },
         run: {
-            imageSrc: './img/kenji/Run.png',
+            imageSrc: './img/kenji/bird_run.png',
             framesMax: 8
         },
         jump: {
-            imageSrc: './img/kenji/Jump.png',
+            imageSrc: './img/kenji/bird_jump.png',
             framesMax: 2
         },
         fall: {
-            imageSrc: './img/kenji/Fall.png',
+            imageSrc: './img/kenji/bird_fall.png',
             framesMax: 2
         },
         attack1: {
-            imageSrc: './img/kenji/Attack1.png',
+            imageSrc: './img/kenji/bird_attack.png',
             framesMax: 4
         },
         takeHit: {
-            imageSrc: './img/kenji/Take_hit.png',
+            imageSrc: './img/kenji/bird_take_hit.png',
             framesMax: 3
         },
         death: {
-            imageSrc: './img/Kenji/Death.png',
+            imageSrc: './img/Kenji/bird_death.png',
             framesMax: 7
         }
     },
@@ -227,7 +227,7 @@ function animate() {
             rectangle1: player,
             rectangle2: enemy
         }) && 
-        player.isAttacking && player.framesCurrent === 4
+        player.isAttacking && player.framesCurrent === 2
     ) {
         enemy.takeHit()
         player.isAttacking = false
@@ -239,7 +239,7 @@ function animate() {
     }
 
     // if player misses
-    if (player.isAttacking && player.framesCurrent === 4) {
+    if (player.isAttacking && player.framesCurrent === 2) {
         player.isAttacking = false
     }
 
