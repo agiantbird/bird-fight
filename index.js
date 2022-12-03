@@ -17,7 +17,7 @@ const background = new Sprite({
     imageSrc: './img/new_background.png'
 })
 
-const shop = new Sprite({
+const volcano = new Sprite({
     position: {
         x: 600,
         y: 128,
@@ -40,7 +40,7 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: './img/samuraiMack/ostrich3.png',
+    imageSrc: './img/ostrich/ostrich3.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -49,31 +49,31 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './img/samuraiMack/ostrich3.png',
+            imageSrc: './img/ostrich/ostrich3.png',
             framesMax: 4
         },
         run: {
-            imageSrc: './img/samuraiMack/ostrich_run.png',
+            imageSrc: './img/ostrich/ostrich_run.png',
             framesMax: 8
         },
         jump: {
-            imageSrc: './img/samuraiMack/ostrich_jump.png',
+            imageSrc: './img/ostrich/ostrich_jump.png',
             framesMax: 2
         },
         fall: {
-            imageSrc: './img/samuraiMack/ostrich_falling.png',
+            imageSrc: './img/ostrich/ostrich_falling.png',
             framesMax: 2
         },
         attack1: {
-            imageSrc: './img/samuraiMack/ostrich_attack.png',
+            imageSrc: './img/ostrich/ostrich_attack.png',
             framesMax: 4
         },
         takeHit: {
-            imageSrc: './img/samuraiMack/ostrich_take_hit.png',
+            imageSrc: './img/ostrich/ostrich_take_hit.png',
             framesMax: 4
         },
         death: {
-            imageSrc: './img/samuraiMack/ostrich_death.png',
+            imageSrc: './img/ostrich/ostrich_death.png',
             framesMax: 6
         }
     },
@@ -101,7 +101,7 @@ const enemy = new Fighter({
         x: -50,
         y: 0
     },
-    imageSrc: './img/kenji/bird_idle.png',
+    imageSrc: './img/secretary_bird/bird_idle.png',
     framesMax: 4,
     scale: 2.5,
     offset: {
@@ -110,31 +110,31 @@ const enemy = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: './img/kenji/bird_idle.png',
+            imageSrc: './img/secretary_bird/bird_idle.png',
             framesMax: 4
         },
         run: {
-            imageSrc: './img/kenji/bird_run.png',
+            imageSrc: './img/secretary_bird/bird_run.png',
             framesMax: 8
         },
         jump: {
-            imageSrc: './img/kenji/bird_jump.png',
+            imageSrc: './img/secretary_bird/bird_jump.png',
             framesMax: 2
         },
         fall: {
-            imageSrc: './img/kenji/bird_fall.png',
+            imageSrc: './img/secretary_bird/bird_fall.png',
             framesMax: 2
         },
         attack1: {
-            imageSrc: './img/kenji/bird_attack.png',
+            imageSrc: './img/secretary_bird/bird_attack.png',
             framesMax: 4
         },
         takeHit: {
-            imageSrc: './img/kenji/bird_take_hit.png',
+            imageSrc: './img/secretary_bird/bird_take_hit.png',
             framesMax: 3
         },
         death: {
-            imageSrc: './img/Kenji/bird_death.png',
+            imageSrc: './img/secretary_bird/bird_death.png',
             framesMax: 7
         }
     },
@@ -176,7 +176,7 @@ function animate() {
     c.fillStyle = 'black'
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
-    shop.update()
+    volcano.update()
     c.fillStyle = 'rgba(255,255,255, 0.15)'
     c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
